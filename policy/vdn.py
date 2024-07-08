@@ -50,6 +50,8 @@ class VDN:
                 print('Successfully load the model: {} and {}'.format(
                     path_rnn, path_vdn))
             else:
+                print(
+                    path_rnn, path_vdn)
                 raise Exception("No model!")
 
         # 让target_net和eval_net的网络参数相同

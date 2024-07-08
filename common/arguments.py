@@ -128,7 +128,9 @@ def get_evaluate_args():
     args = set_default(args)
     ENV = config(args.name, args.version)
     filename ='TrainParas/4d.yaml'
-    with open(filename) as f:
+    # with open(filename) as f:
+    #     netdata, data = yaml.safe_load_all(f.read())
+    with open(filename, 'r', encoding='utf-8') as f:
         netdata, data = yaml.safe_load_all(f.read())
     args.__dict__.update(netdata)
     return args, ENV

@@ -11,12 +11,12 @@ the trained model will be saved in "data-dmfb/model/vdn/fov9/4d0b/
 ## Evaluate model in health mode
 python evaluate.py dmfb --drop_num=4 --chip_size=20 --evaluate_task=100 --show
 
-This will evaluate the performance of the model: "data-dmfb/model/vdn/fov9/4d0b/rnn_net_params.pkl" and "data-dmfb/model/vdn/fov9/4d0b/vdn_net_params.pkl"
+This will evaluate the performance of the model: "data-dmfb/model/vdn/fov9/rnn_net_params.pkl" and "data-dmfb/model/vdn/fov9/4d0b/vdn_net_params.pkl"
 
 ## Evaluate model with electrodes degrade
 python evaDegre.py dmfb --evaluate_task = 20 --fov=9 --drop_num=4
 
-This will evaluate the performance of the model: "data-dmfb/model/vdn/fov9/4d0b/rnn_net_params.pkl" and "data-dmfb/model/vdn/fov9/4d0b/vdn_net_params.pkl"
+This will evaluate the performance of the model: "data-dmfb/model/vdn/fov9/rnn_net_params.pkl" and "data-dmfb/model/vdn/fov9/4d0b/vdn_net_params.pkl"
 
 The data will be saved in "data-dmfb/DgreData/10by10-4d0b"
 
@@ -28,3 +28,4 @@ Then all data are saved under fold "data-meda/"
 
 ## Parameters
 You can find more usages or change the parameters of the algorithm in the file "common/arguments.py"
+
