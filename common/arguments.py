@@ -99,8 +99,8 @@ def get_train_args(recieve=None, pri=True):
     args = set_default(args)
     ENV=config(args.name, args.version)
     filename ='TrainParas/{}d.yaml'.format(args.drop_num)
-    with open(filename) as f:
-        netdata, data = yaml.safe_load_all(f.read())
+    with open(filename, 'r', encoding='utf-8') as f:
+        netdata, data = yaml.safe_load_all(f)
     args.__dict__.update(netdata)
     args.__dict__.update(data)
     args.n_steps=args.n_steps*100000
